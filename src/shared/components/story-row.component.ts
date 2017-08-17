@@ -5,7 +5,8 @@ import { Item } from '../item.model';
 
 @Component({
   selector: 'story-row',
-  templateUrl: 'story-row.component.html'
+  templateUrl: 'story-row.component.html',
+  styles: ['./story-row.component.scss']
 })
 export class StoryRow {
 
@@ -21,7 +22,6 @@ export class StoryRow {
   ngOnInit() {
     this.QuackerNewsService.getItem(this.storyId).subscribe((item: Item) => {
       this.story = item;
-      console.log(this.story.type);
     });
   }
 }

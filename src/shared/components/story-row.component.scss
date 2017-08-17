@@ -1,0 +1,16 @@
+story-row {
+  border-bottom: 1px solid #D6D6D6;
+  display: block;
+  font-size: 18px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  span.score {
+    padding-right: 5px;
+    color: red;
+    font-weight: bold;
+    font-size: 12px;
+  }
+}

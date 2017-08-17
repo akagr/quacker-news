@@ -10,4 +10,8 @@
 </ion-header>
 <ion-content padding id="page2">
   <story-row *ngFor="let story of stories" [storyId]="story"></story-row>
+
+  <ion-infinite-scroll (ionInfinite)="loadMoreStories($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>
