@@ -9,8 +9,16 @@ story-row {
 
   span.score {
     padding-right: 5px;
-    color: red;
+    color: #488aff;
     font-weight: bold;
     font-size: 12px;
+  }
+
+  span.comments {
+    color: #488aff;
+    font-size: 12px;
+    display: block;
+    text-align: right;
+    font-weight: bold;
   }
 }
