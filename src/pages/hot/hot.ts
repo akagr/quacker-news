@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { QuackerNewsService } from '../../shared/quacker-news.service';
 
 @Component({
   selector: 'page-hot',
@@ -7,7 +8,18 @@ import { NavController } from 'ionic-angular';
 })
 export class HotPage {
 
-  constructor(public navCtrl: NavController) {
+  private stories: Array<number>;
+
+  constructor(
+    public navCtrl: NavController,
+    public QuackerNewsService: QuackerNewsService
+  ) {
+
   }
-  
+
+  ngOnInit() {
+    this.QuackerNewsService.getHot(1).subscribe((data: Array<number>) => {
+      this.stories = data.slice(0, 15);
+    });
+  }
 }

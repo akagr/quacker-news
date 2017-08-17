@@ -9,18 +9,5 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding id="page2">
-  <ion-list id="hot-list2">
-    <ion-item-divider color="light" id="hot-list-item-divider2">
-      Page 1
-    </ion-item-divider>
-    <ion-item color="none" id="hot-list-item4">
-      Item 1
-    </ion-item>
-    <ion-item color="none" id="hot-list-item5">
-      Item 2
-    </ion-item>
-    <ion-item color="none" id="hot-list-item6">
-      Item 3
-    </ion-item>
-  </ion-list>
+  <story-row *ngFor="let story of stories" [storyId]="story"></story-row>
 </ion-content>
