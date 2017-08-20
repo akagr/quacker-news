@@ -3,7 +3,7 @@ A simple Hacker News client made with Ionic
 
 ---------------------------------------
 
-![quacker-gif](https://user-images.githubusercontent.com/2797603/29497545-677106aa-8607-11e7-83dd-801b699e0149.gif)
+![quacker-gif](https://user-images.githubusercontent.com/2797603/29497755-905bc1b4-860b-11e7-9593-766c0de6458e.gif)
 
 ## Instructions
 
