@@ -13,5 +13,4 @@ export class TabsControllerPage {
   tab2Root: any = NewPage;
   constructor(public navCtrl: NavController) {
   }
-  
 }
