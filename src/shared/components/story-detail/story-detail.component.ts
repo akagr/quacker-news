@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavParams } from 'ionic-angular';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+
 import { Item } from '../../item.model';
 
 @Component({
@@ -11,7 +13,14 @@ export class StoryDetail {
 
   private story: Item = new Item({});
 
-  constructor(private params: NavParams) {
+  constructor(
+    private params: NavParams,
+    private iab: InAppBrowser
+  ) {
     this.story = this.params.get('story');
+  }
+
+  openUrl() {
+    this.iab.create(this.story.url);
   }
 }
