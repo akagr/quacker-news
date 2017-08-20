@@ -1,0 +1,4 @@
+<span [innerHtml]="item.userHandle" class="comment-user-handle"></span>
+<span>[{{item.createdAt | date:'shortDate'}}]</span>
+<p [innerHtml]="item.text" class="comment-text"></p>
+<story-comment *ngFor="let child of item.directChildren" [itemId]="child"></story-comment>

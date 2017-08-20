@@ -5,3 +5,6 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
+<ion-content>
+  <story-comment *ngFor="let child of story.directChildren" [itemId]="child"></story-comment>
+</ion-content>

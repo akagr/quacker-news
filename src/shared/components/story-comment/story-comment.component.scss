@@ -1,0 +1,17 @@
+story-comment {
+  display: block;
+  border-bottom: 1px solid #D6D6D6;
+  border-left: 1px solid #D6D6D6;
+  padding: 5px 10px;
+  padding-left: 15px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .comment-user-handle {
+    color: #488aff;
+    font-weight: bold;
+    font-style: italic;
+  }
+}

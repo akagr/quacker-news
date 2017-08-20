@@ -3,8 +3,10 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from 'ionic-angular';
 
 import { QuackerNewsService } from './quacker-news.service';
+
 import { StoryRow } from './components/story-row/story-row.component';
 import { StoryDetail } from './components/story-detail/story-detail.component';
+import { StoryComment } from './components/story-comment/story-comment.component';
 
 @NgModule({
   imports: [
@@ -19,10 +21,12 @@ import { StoryDetail } from './components/story-detail/story-detail.component';
   ],
   declarations: [
     StoryRow,
+    StoryComment,
     StoryDetail
   ],
   exports: [
     StoryRow,
+    StoryComment,
     StoryDetail
   ]
 })
