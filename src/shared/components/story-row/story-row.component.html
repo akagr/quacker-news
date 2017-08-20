@@ -1,4 +1,4 @@
-<p>
+<p [navPush]="storyDetails" [navParams]="{story: story}">
   <span class="score">{{story.score}}</span>
   {{story.title}}
   <span class="comments">{{story.totalChildren}} comments</span>

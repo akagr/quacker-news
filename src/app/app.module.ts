@@ -8,7 +8,6 @@ import { HotPage } from '../pages/hot/hot';
 import { NewPage } from '../pages/new/new';
 import { TabsControllerPage } from '../pages/tabs-controller/tabs-controller';
 
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 

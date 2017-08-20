@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http } from '@angular/http';
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 
@@ -12,8 +12,13 @@ export class QuackerNewsService {
   constructor(private http: Http) {
   }
 
-  getHot(page: number = 1): Observable<[number]> {
+  getHot(): Observable<[number]> {
     return this.http.get(`${this.apiUrl}/topstories.json`)
+      .map(res => res.json());
+  }
+
+  getNew(): Observable<[number]> {
+    return this.http.get(`${this.apiUrl}/newstories.json`)
       .map(res => res.json());
   }
 

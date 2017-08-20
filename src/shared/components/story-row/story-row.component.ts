@@ -1,7 +1,8 @@
 import { Component, Input } from '@angular/core';
-import { QuackerNewsService } from '../quacker-news.service';
+import { QuackerNewsService } from '../../quacker-news.service';
 
-import { Item } from '../item.model';
+import { Item } from '../../item.model';
+import { StoryDetail } from '../story-detail/story-detail.component';
 
 @Component({
   selector: 'story-row',
@@ -13,10 +14,12 @@ export class StoryRow {
   @Input() storyId: number;
 
   private story: Item = new Item({});
+  private storyDetails: any;
 
   constructor(
-    public QuackerNewsService: QuackerNewsService
+    private QuackerNewsService: QuackerNewsService
   ) {
+    this.storyDetails = StoryDetail;
   }
 
   ngOnInit() {
